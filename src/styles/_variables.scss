@@ -1,0 +1,162 @@
+// __          __     _____  _   _ _____ _   _  _____
+// \ \        / /\   |  __ \| \ | |_   _| \ | |/ ____|
+//  \ \  /\  / /  \  | |__) |  \| | | | |  \| | |  __
+//   \ \/  \/ / /\ \ |  _  /| . ` | | | | . ` | | |_ |
+//    \  /\  / ____ \| | \ \| |\  |_| |_| |\  | |__| |
+//     \/  \/_/    \_\_|  \_\_| \_|_____|_| \_|\_____|
+//
+//
+//    This file is automaltically injected into
+//            ALL scss and sass files
+//
+//    Do NOT write css rules here or they will be
+//        spammed and repeated everywhere
+
+@use "sass:math";
+@use "sass:meta";
+
+//
+//
+// Global Vars (vuetify override) https://vuetifyjs.com/en/api/vuetify/#sass-variables
+//
+//
+$font-size-root: 16px; // root font size of the app
+$line-height-root: 1.5; // main line height (default)
+$zeplin-size: 20px; // base font size to convert values from zeplin
+
+// Colors
+$c-blue : #2724C9;
+$c-purple: #5754DB;
+$c-dark-blue: #0C0B56;
+$c-white: #fff;
+$c-black: #000;
+//
+//
+// Global Mixins
+//
+//
+
+//
+//
+// Global Functions
+//
+//
+
+/*
+
+Function to convert a value or a list of values to rem
+Example:
+- Using the font root size
+    font-size: rem(25px);
+    margin: rem(25px 20px 10px 5px);
+
+- Using a custom base unit
+    font-size: rem(25px, 20px);
+    margin: rem(25px 20px 10px 5px, 20);
+
+- Using a variable like base unit
+    font-size: rem(25px, $zeplin-size);
+    margin: rem(25px 20px 10px 5px, $zeplin-size);
+
+- Using a different threshold
+    font-size: rem(25px, $font-size-root, 10);
+    margin: rem(25px 20px 10px 5px, $zeplin-size, 10);
+*/
+
+@function rem($data, $base: $font-size-root, $threshold: 4) {
+    @if type-of($data)=="list" {
+        $values: ();
+
+        @each $value in $data {
+            $values: append($values, rem($value, $base, $threshold));
+        }
+
+        @return $values;
+    }
+
+    @if index("rem", unit($data)) !=null {
+        @return $data;
+    }
+
+    $value: strip-unit($data);
+
+    @if abs($value) < $threshold {
+        @return $data;
+    }
+
+    @else {
+        @return #{math.div($value, strip-unit($base))}rem;
+    }
+}
+
+// function to strip unit
+@function strip-unit($number) {
+    @if type-of($number)=="number" and not unitless($number) {
+        @return math.div($number, $number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+
+@mixin auto-scaling($naturalPhoneSize: 375,
+    $naturalDesktopSize: 1440,
+    $phoneBreakpoints: (320, 360, 375, 414),
+    $desktopBreakpoints: (1024, 1152, 1280, 1366, 1440, 1536, 1600, 1920)) {
+
+    // generating mobile rules
+    @if meta.type-of($naturalPhoneSize)=='number' and meta.type-of($phoneBreakpoints)=='list' {
+        @each $phoneBreakpoint in $phoneBreakpoints {
+            @if math.is-unitless($phoneBreakpoint) {
+                $phoneBreakpoint: $phoneBreakpoint * 1px;
+            }
+
+            @media screen and (min-width: $phoneBreakpoint) {
+                font-size: math.floor(math.div(strip-unit($phoneBreakpoint), strip-unit($naturalPhoneSize)) * 100) * 1%;
+            }
+        }
+    }
+
+    // generating desktop rules
+    @if meta.type-of($naturalDesktopSize)=='number' and meta.type-of($desktopBreakpoints)=='list' {
+        @each $desktopBreakpoint in $desktopBreakpoints {
+            @if math.is-unitless($desktopBreakpoint) {
+                $desktopBreakpoint: $desktopBreakpoint * 1px;
+            }
+
+            @media screen and (min-width: $desktopBreakpoint) {
+                font-size: math.floor(math.div(strip-unit($desktopBreakpoint), strip-unit($naturalDesktopSize)) * 100) * 1%;
+            }
+        }
+    }
+}
+
+//
+//
+// Utility Easings
+//
+//
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+$ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);

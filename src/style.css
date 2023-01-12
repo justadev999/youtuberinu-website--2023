@@ -1,0 +1,28 @@
+@font-face {
+  font-family: FacadeNormal;
+  src: url("./assets/font/facade/Facade-Ouest.otf");
+}
+
+
+h1 {
+  font-family: FacadeNormal;
+  font-size: 64px;
+}
+
+h2 {
+  font-family: FacadeNormal;
+  font-size: 40px;
+}
+h3 {
+  font-family: FacadeNormal;
+  font-size: 24px;
+}
+p {
+  font-family: FacadeNormal;
+  font-size: 20px;
+}
+a {
+  font-family: FacadeNormal;
+  font-size: 24px;
+  cursor:pointer;
+}
