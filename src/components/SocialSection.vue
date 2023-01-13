@@ -106,7 +106,6 @@ export default defineComponent({
 
   @media (min-width: 1600px) {
     width: 150%;
-    outline: auto;
   }
 }
 
