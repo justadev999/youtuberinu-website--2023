@@ -60,6 +60,7 @@ export default defineComponent({
 .stonk-hero {
   background-color: transparent;
   padding-top: rem(180);
+  max-height: rem(900);
 
   @media (min-width: 1024px) {
     display: grid;

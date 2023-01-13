@@ -61,6 +61,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .stonk-hero {
+  max-height: rem(900);
   background-color: $c-blue;
   padding-top: rem(180);
 
