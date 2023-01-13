@@ -6,12 +6,13 @@ import NavBar from "./molecules/NavBar.vue";
 import StonkHero from "./components/StonkHero.vue";
 import ProjectSection from "./components/ProjectSection.vue";
 import TokenSection from "./components/TokenSection.vue";
+import SocialSection from "./components/SocialSection.vue"
 
 export default defineComponent({
   name: "App",
-  components: { LoadingScreen, StonkHero, NavBar, ProjectSection, TokenSection },
+  components: { LoadingScreen, StonkHero, NavBar, ProjectSection, TokenSection, SocialSection },
   setup() {
-    const isLoading = ref(false);
+    const isLoading = ref(true);
 
     onMounted(() => {
       setTimeout(() => {
@@ -32,6 +33,7 @@ export default defineComponent({
     <StonkHero v-if="!isLoading" />
     <ProjectSection v-if="!isLoading" />
     <TokenSection v-if="!isLoading" />
+    <SocialSection v-if="!isLoading" />
   </div>
 </template>
 
