@@ -160,10 +160,11 @@ export default defineComponent({
 <style scoped lang="scss">
 .stonk-hero {
   background-color: transparent;
-  padding-top: rem(180);
+  padding-top: rem(325);
   max-height: rem(900);
 
   @media (min-width: 1024px) {
+    padding-top: rem(180);
     display: grid;
     grid-template-columns: 75% 20%;
     column-gap: rem(68);

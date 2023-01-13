@@ -12,7 +12,7 @@ export default defineComponent({
   name: "App",
   components: { LoadingScreen, StonkHero, NavBar, ProjectSection, TokenSection, SocialSection },
   setup() {
-    const isLoading = ref(true);
+    const isLoading = ref(false);
 
     onMounted(() => {
       setTimeout(() => {
