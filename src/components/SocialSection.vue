@@ -3,14 +3,14 @@ import { computed, defineComponent } from "vue";
 import { useBreakpoint } from "../functions/useBreakpoint";
 
 import TgLogo from "../assets/svg/telegram-logo(1).svg";
-import EtherscanLogo from "../assets/svg/etherscan-logo(1).svg";
+import EthLogo from "../assets/svg/etherscan-logo(1).svg"
 import UniswapLogo from "../assets/svg/uniswap-logo(1).svg";
 import TwLogo from "../assets/svg/twitter-logo(1).svg";
-import DxLogo from "../assets/svg/dextools-logo(1).svg";
+import DexToolsLogo from "../assets/svg/dextools-logo(1).svg"
 
 export default defineComponent({
   name: "SocialSection",
-  components: { TgLogo, EtherscanLogo, UniswapLogo, TwLogo, DxLogo },
+  components: { TgLogo, EthLogo, UniswapLogo, TwLogo, DexToolsLogo },
   setup() {
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
@@ -41,7 +41,7 @@ export default defineComponent({
           <TgLogo />
         </li>
         <li class="social-list-item cursor-pointer">
-          <EtherscanLogo />
+          <EthLogo />
         </li>
         <li class="social-list-item cursor-pointer">
           <UniswapLogo />
@@ -50,7 +50,7 @@ export default defineComponent({
           <TwLogo />
         </li>
         <li class="social-list-item cursor-pointer">
-          <DxLogo />
+          <DexToolsLogo/>
         </li>
       </ul>
     </div>

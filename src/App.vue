@@ -1,18 +1,30 @@
 <script>
-import { defineComponent, onMounted, ref } from "vue";
+import { computed, defineComponent, onMounted, ref } from "vue";
 import LoadingScreen from "./components/LoadingScreen.vue";
 
 import NavBar from "./molecules/NavBar.vue";
 import StonkHero from "./components/StonkHero.vue";
 import ProjectSection from "./components/ProjectSection.vue";
 import TokenSection from "./components/TokenSection.vue";
-import SocialSection from "./components/SocialSection.vue"
+import SocialSection from "./components/SocialSection.vue";
+
+import { useBreakpoint } from "./functions/useBreakpoint";
 
 export default defineComponent({
   name: "App",
-  components: { LoadingScreen, StonkHero, NavBar, ProjectSection, TokenSection, SocialSection },
+  components: {
+    LoadingScreen,
+    StonkHero,
+    NavBar,
+    ProjectSection,
+    TokenSection,
+    SocialSection,
+  },
   setup() {
     const isLoading = ref(false);
+
+    const matches = useBreakpoint();
+    const isMobile = computed(() => matches.value?.beforeLg);
 
     onMounted(() => {
       setTimeout(() => {
@@ -21,6 +33,7 @@ export default defineComponent({
     });
     return {
       isLoading,
+      isMobile,
     };
   },
 });
@@ -34,6 +47,21 @@ export default defineComponent({
     <ProjectSection v-if="!isLoading" />
     <TokenSection v-if="!isLoading" />
     <SocialSection v-if="!isLoading" />
+    <footer
+      v-if="!isMobile"
+      class="
+        footer
+        w-full
+        absolute
+        bottom-0
+        left-0
+        flex
+        items-center
+        justify-center
+      "
+    >
+      <h2>Copyright 2023 | Stonks Inu | All Rights Reserved</h2>
+    </footer>
   </div>
 </template>
 
@@ -48,5 +76,10 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
   }
+}
+
+.footer {
+  height: rem(36);
+  background-color: $c-white;
 }
 </style>

@@ -8,7 +8,7 @@ export default defineComponent({
   name: "TokenSection",
   components: { GreenArrow },
   setup() {
-    const tokenContract = ref("0x4159862bcf6b4393a80550b1ed03dffa6f90533c");
+    const tokenContract = ref("TBA");
 
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
@@ -160,8 +160,12 @@ export default defineComponent({
 <style scoped lang="scss">
 .stonk-hero {
   background-color: transparent;
-  padding-top: rem(325);
+  padding-top: rem(355);
   max-height: rem(900);
+
+  @media(min-height:850px){
+    padding-top: rem(425);
+  }
 
   @media (min-width: 1024px) {
     padding-top: rem(180);

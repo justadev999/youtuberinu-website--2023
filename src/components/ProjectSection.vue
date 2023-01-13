@@ -2,11 +2,12 @@
 import { computed, defineComponent } from "vue";
 import { useBreakpoint } from "../functions/useBreakpoint";
 
-import YellowArrow from "../assets/svg/yellow-arrow.svg"
+import YellowArrow from "../assets/svg/yellow-arrow.svg";
+import ChartImage from "../assets/svg/chart-img(1).svg";
 
 export default defineComponent({
   name: "ProjectSection",
-  components: {YellowArrow},
+  components: { YellowArrow, ChartImage },
   setup() {
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
@@ -22,9 +23,11 @@ export default defineComponent({
     <div class="description-wrapper h-full">
       <div class="chart-side w-full h-[50vh] lg:h-full mb-8 lg:mb-0">
         <div class="chart-title p-4">
-            <h2>Stonking the market</h2>
+          <h2>Stonking the market</h2>
         </div>
-        <div class="chart"></div>
+        <div class="chart">
+          <ChartImage class="w-full h-full" />
+        </div>
       </div>
       <div class="images-side w-full h-full flex items-end justify-end">
         <div
@@ -38,9 +41,9 @@ export default defineComponent({
             justify-between
           "
         >
-          <div class="stonk-img"></div>
-          <div class="stonk-img"></div>
-          <div class="stonk-img"></div>
+          <img class="stonk-img" src="../assets/images/stonk-img.jpg" />
+          <img class="stonk-img" src="../assets/images/not-stonk.jpg" />
+          <img class="stonk-img" src="../assets/images/confused-stonk.jpg" />
         </div>
       </div>
     </div>
@@ -106,6 +109,7 @@ export default defineComponent({
   & .stonk-img {
     height: rem(192);
     width: 100%;
+    object-fit: cover;
     background-color: white;
     border: 10px solid #0c0b56;
     filter: drop-shadow(12px 15px 4px #000000);
