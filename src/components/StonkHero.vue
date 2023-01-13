@@ -2,8 +2,11 @@
 import { computed, defineComponent } from "vue";
 import { useBreakpoint } from "../functions/useBreakpoint";
 
+import RedArrow from "../assets/svg/red-arrow.svg";
+
 export default defineComponent({
   name: "StonkHero",
+  components: { RedArrow },
   setup() {
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
@@ -38,10 +41,17 @@ export default defineComponent({
         </p>
       </div>
       <div class="image-side w-full h-full flex items-end justify-end">
-        <img src="../assets/images/stonk-body-_1_.webp" class="stonk-body-image h-full" />
+        <img
+          src="../assets/images/stonk-body-_1_.webp"
+          class="stonk-body-image h-full"
+        />
       </div>
     </div>
-    <div v-if="!isMobile" class="stonk-o-meter flex items-end">
+    <div
+      v-if="!isMobile"
+      class="stonk-o-meter flex flex-col items-center justify-end"
+    >
+      <RedArrow class="red-arrow" />
       <div class="w-full flex items-center justify-center">
         <p class="uppercase">Stonk-o-meter</p>
       </div>
@@ -106,5 +116,9 @@ export default defineComponent({
       font-size: rem(26);
     }
   }
+}
+
+.red-arrow {
+  height: rem(114);
 }
 </style>

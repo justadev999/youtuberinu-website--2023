@@ -47,6 +47,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   max-width: rem(1680);
+  z-index: 10;
 
   @media (min-width: 1024px) {
     display: grid;

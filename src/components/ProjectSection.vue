@@ -2,8 +2,11 @@
 import { computed, defineComponent } from "vue";
 import { useBreakpoint } from "../functions/useBreakpoint";
 
+import YellowArrow from "../assets/svg/yellow-arrow.svg"
+
 export default defineComponent({
   name: "ProjectSection",
+  components: {YellowArrow},
   setup() {
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
@@ -15,12 +18,37 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="stonk-hero h-screen w-full mb-8 lg:mb-12">
+  <section class="stonk-hero h-fit lg:h-screen w-full mb-8 lg:mb-12">
     <div class="description-wrapper h-full">
-      <div class="chart-side w-full h-full"></div>
-      <div class="images-side w-full h-full flex items-end justify-end"></div>
+      <div class="chart-side w-full h-[50vh] lg:h-full mb-8 lg:mb-0">
+        <div class="chart-title p-4">
+            <h2>Stonking the market</h2>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="images-side w-full h-full flex items-end justify-end">
+        <div
+          class="
+            images-wrapper
+            w-full
+            lg:w-[80%]
+            h-full
+            flex flex-col
+            items-center
+            justify-between
+          "
+        >
+          <div class="stonk-img"></div>
+          <div class="stonk-img"></div>
+          <div class="stonk-img"></div>
+        </div>
+      </div>
     </div>
-    <div v-if="!isMobile" class="stonk-o-meter flex items-end">
+    <div
+      v-if="!isMobile"
+      class="stonk-o-meter flex flex-col items-center justify-end"
+    >
+      <YellowArrow class="yellow-arrow" />
       <div class="w-full flex items-center justify-center">
         <p class="uppercase">Stonk-o-meter</p>
       </div>
@@ -55,6 +83,8 @@ export default defineComponent({
   background-color: $c-white;
   border: 10px solid #0c0b56;
   box-shadow: 12px 15px 0px #000000;
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
   h2 {
     font-size: rem(36);
 
@@ -67,6 +97,21 @@ export default defineComponent({
 
     @media (min-width: 1024px) {
       font-size: rem(22);
+    }
+  }
+}
+
+.images-wrapper {
+  & .stonk-img {
+    height: rem(192);
+    width: 100%;
+    background-color: white;
+    border: 10px solid #0c0b56;
+    filter: drop-shadow(12px 15px 4px #000000);
+    margin-bottom: rem(22);
+
+    @media (min-width: 1024px) {
+      height: 30%;
     }
   }
 }
@@ -85,5 +130,9 @@ export default defineComponent({
       font-size: rem(26);
     }
   }
+}
+
+.yellow-arrow {
+  height: rem(275);
 }
 </style>

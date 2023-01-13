@@ -25,7 +25,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="main-wrapper w-full relative px-8 lg:px-16">
+  <div class="main-wrapper w-full relative px-4 lg:px-16">
     <NavBar v-if="!isLoading" />
     <LoadingScreen v-if="isLoading" />
     <StonkHero v-if="!isLoading" />
