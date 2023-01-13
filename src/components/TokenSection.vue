@@ -50,7 +50,7 @@ export default defineComponent({
         <div
           class="
             contract-wrapper
-            h-full
+            lg:h-full
             w-full
             lg:w-[70%]
             flex
@@ -133,15 +133,14 @@ export default defineComponent({
                 stat-number
                 w-full
                 h-[70%]
-                flex
-                flex-col
+                flex flex-col
                 items-center
                 justify-center
               "
             >
-            <p>Locked</p>
-            <p>Renounced</p>
-        </div>
+              <p>Locked</p>
+              <p>Renounced</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -183,8 +182,51 @@ export default defineComponent({
 }
 
 .token-wrapper {
+  height: rem(86);
+  margin-bottom: rem(32);
   p {
     font-size: rem(64);
+  }
+  @media (min-width: 1024px) {
+    height: 100%;
+    margin-bottom: none;
+  }
+}
+.contract-wrapper {
+  height: rem(86);
+  margin-bottom: rem(32);
+  p {
+    font-size: rem(13);
+
+    @media (min-width: 1024px) {
+      font-size: rem(24);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    height: 100%;
+    margin-bottom: none;
+  }
+}
+
+.stat-title {
+  height: rem(60);
+  width: 75%;
+  margin-bottom: rem(32);
+
+  @media (min-width: 1024px) {
+    height: 20%;
+    width: 100%;
+    margin-bottom: none;
+  }
+}
+.stat-number {
+  margin-bottom: rem(32);
+  height: rem(122);
+
+  @media (min-width: 1024px) {
+    margin-bottom: none;
+    height: 100%;
   }
 }
 
