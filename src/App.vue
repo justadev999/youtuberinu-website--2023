@@ -48,7 +48,7 @@ export default defineComponent({
     <TokenSection v-if="!isLoading" />
     <SocialSection v-if="!isLoading" />
     <footer
-      v-if="!isMobile"
+      v-if="!isMobile && !isLoading"
       class="
         footer
         w-full
