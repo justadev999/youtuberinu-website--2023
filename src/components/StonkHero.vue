@@ -18,7 +18,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="stonk-hero h-screen w-full mb-8 lg:mb-12">
+  <section class="stonk-hero lg:h-screen w-full mb-8 lg:mb-12">
     <div class="description-wrapper h-full">
       <div
         class="
