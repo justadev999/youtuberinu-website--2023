@@ -5,10 +5,11 @@ import LoadingScreen from "./components/LoadingScreen.vue";
 import NavBar from "./molecules/NavBar.vue";
 import StonkHero from "./components/StonkHero.vue";
 import ProjectSection from "./components/ProjectSection.vue";
+import TokenSection from "./components/TokenSection.vue";
 
 export default defineComponent({
   name: "App",
-  components: { LoadingScreen, StonkHero, NavBar, ProjectSection },
+  components: { LoadingScreen, StonkHero, NavBar, ProjectSection, TokenSection },
   setup() {
     const isLoading = ref(false);
 
@@ -30,6 +31,7 @@ export default defineComponent({
     <LoadingScreen v-if="isLoading" />
     <StonkHero v-if="!isLoading" />
     <ProjectSection v-if="!isLoading" />
+    <TokenSection v-if="!isLoading" />
   </div>
 </template>
 
