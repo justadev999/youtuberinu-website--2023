@@ -25,13 +25,13 @@ export default defineComponent({
       </div>
       <ul class="nav-items-wrapper flex items-center justify-between w-[60%]">
         <li>
-          <a>home</a>
+          <a href="#home">home</a>
         </li>
         <li>
-          <a>project</a>
+          <a href="#project">project</a>
         </li>
         <li>
-          <a>token</a>
+          <a href="#token">token</a>
         </li>
       </ul>
     </div>

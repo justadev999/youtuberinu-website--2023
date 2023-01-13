@@ -19,7 +19,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="stonk-hero h-fit lg:h-screen w-full mb-8 lg:mb-12">
+  <section id="project" class="stonk-hero h-fit lg:h-screen w-full mb-8 lg:mb-12">
     <div class="description-wrapper h-full">
       <div class="chart-side w-full h-[50vh] lg:h-full mb-8 lg:mb-0">
         <div class="chart-title p-4">

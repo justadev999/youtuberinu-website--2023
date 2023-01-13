@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="stonk-hero h-fit lg:h-screen w-full mb-8 lg:mb-12">
+  <section id="token" class="stonk-hero h-fit lg:h-screen w-full mb-8 lg:mb-12">
     <div class="token-infos-wrapper h-full w-full">
       <div
         class="
