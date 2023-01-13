@@ -16,6 +16,9 @@ export default defineComponent({
 
 <template>
   <nav class="w-full fixed top-0 left-0 pt-8 px-8 lg:px-16">
+     <div v-if="isMobile" class="logo-wrapper">
+        <h2 class="logo-label-mobile">$STONK Inu</h2>
+      </div>
     <div
       v-if="!isMobile"
       class="nav-content w-full flex items-center justify-between pl-7 pr-20"
@@ -102,5 +105,10 @@ nav {
     color: $c-white;
     box-shadow: none;
   }
+}
+
+.logo-label-mobile{
+  color: $c-white;
+  font-size: rem(42);
 }
 </style>

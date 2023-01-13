@@ -21,7 +21,7 @@ export default defineComponent({
     SocialSection,
   },
   setup() {
-    const isLoading = ref(false);
+    const isLoading = ref(true);
 
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
