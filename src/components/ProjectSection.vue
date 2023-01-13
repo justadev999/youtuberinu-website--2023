@@ -3,7 +3,7 @@ import { computed, defineComponent } from "vue";
 import { useBreakpoint } from "../functions/useBreakpoint";
 
 export default defineComponent({
-  name: "StonkHero",
+  name: "ProjectSection",
   setup() {
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
@@ -17,29 +17,8 @@ export default defineComponent({
 <template>
   <section class="stonk-hero h-screen w-full mb-8 lg:mb-12">
     <div class="description-wrapper h-full">
-      <div
-        class="
-          text-side
-          w-full
-          h-full
-          flex flex-col
-          items-start
-          justify-center
-          px-2
-          lg:px-4
-        "
-      >
-        <h2>One goal: STONK!</h2>
-        <p>
-          Chad felt a deep sense of hopelessness as he struggled to come to
-          terms with his losses and mistakes. But in his darkest hour, he let
-          out a cry of determination. "I know! I'll create a crypto stonk!" he
-          yelled out to the empty room, a glimmer of hope in his eyes.
-        </p>
-      </div>
-      <div class="image-side w-full h-full flex items-end justify-end">
-        <img src="../assets/images/stonk-body-_1_.webp" class="stonk-body-image h-full" />
-      </div>
+      <div class="chart-side w-full h-full"></div>
+      <div class="images-side w-full h-full flex items-end justify-end"></div>
     </div>
     <div v-if="!isMobile" class="stonk-o-meter flex items-end">
       <div class="w-full flex items-center justify-center">
@@ -51,7 +30,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .stonk-hero {
-  background-color: $c-blue;
+  background-color: transparent;
   padding-top: rem(180);
 
   @media (min-width: 1024px) {
@@ -62,9 +41,6 @@ export default defineComponent({
 }
 
 .description-wrapper {
-  background-color: $c-white;
-  border: 10px solid #0c0b56;
-  box-shadow: 12px 15px 4px #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +51,10 @@ export default defineComponent({
   }
 }
 
-.text-side {
+.chart-side {
+  background-color: $c-white;
+  border: 10px solid #0c0b56;
+  box-shadow: 12px 15px 0px #000000;
   h2 {
     font-size: rem(36);
 

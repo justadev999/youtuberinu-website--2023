@@ -1,14 +1,16 @@
 <script>
 import { defineComponent, onMounted, ref } from "vue";
 import LoadingScreen from "./components/LoadingScreen.vue";
-import StonkHero from "./components/StonkHero.vue";
+
 import NavBar from "./molecules/NavBar.vue";
+import StonkHero from "./components/StonkHero.vue";
+import ProjectSection from "./components/ProjectSection.vue";
 
 export default defineComponent({
   name: "App",
-  components: { LoadingScreen, StonkHero, NavBar },
+  components: { LoadingScreen, StonkHero, NavBar, ProjectSection },
   setup() {
-    const isLoading = ref(true);
+    const isLoading = ref(false);
 
     onMounted(() => {
       setTimeout(() => {
@@ -27,8 +29,7 @@ export default defineComponent({
     <NavBar v-if="!isLoading" />
     <LoadingScreen v-if="isLoading" />
     <StonkHero v-if="!isLoading" />
-    <StonkHero v-if="!isLoading" />
-    <StonkHero v-if="!isLoading" />
+    <ProjectSection v-if="!isLoading" />
   </div>
 </template>
 
