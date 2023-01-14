@@ -64,6 +64,17 @@ export default defineComponent({
         },
         "<"
       );
+      tl.fromTo(
+        ".red-arrow",
+        { autoAlpha: 0, y: 50 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.4,
+          animation: "power3.in",
+        },
+        "<"
+      );
     });
     return {
       isMobile,
@@ -75,6 +86,12 @@ export default defineComponent({
 <template>
   <section id="home" class="stonk-hero w-full mb-12 lg:mb-24">
     <div class="description-wrapper h-full">
+      <div class="image-side w-full h-full relative">
+        <img
+          src="../assets/images/flipped-stonk-body.webp"
+          class="stonk-body-image absolute bottom-0 left-0"
+        />
+      </div>
       <div
         class="
           text-side
@@ -94,12 +111,6 @@ export default defineComponent({
           out a cry of determination. "I know! I'll create a crypto stonk!" he
           yelled out to the empty room, a glimmer of hope in his eyes.
         </p>
-      </div>
-      <div class="image-side w-full h-full relative">
-        <img
-          src="../assets/images/stonk-body-_1_.webp"
-          class="stonk-body-image absolute bottom-0 right-0"
-        />
       </div>
     </div>
     <div

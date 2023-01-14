@@ -81,7 +81,7 @@ export default defineComponent({
                 justify-center
               "
             >
-              <p>1_000_000_0</p>
+              <p>1 Billion</p>
             </div>
           </li>
           <li class="stat-li w-full h-full">
