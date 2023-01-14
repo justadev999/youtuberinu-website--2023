@@ -52,13 +52,13 @@ export default defineComponent({
           <div class="stonk-img relative overflow-hidden">
             <img
               class="w-full h-full absolute top-0 left-0 object-cover"
-              src="../assets/images/stonk-img.jpg"
+              src="../assets/images/confused-stonk.jpg"
             />
           </div>
           <div class="stonk-img relative overflow-hidden">
             <img
               class="w-full h-full absolute top-0 left-0 object-cover"
-              src="../assets/images/stonk-img.jpg"
+              src="../assets/images/not-stonk.jpg"
             />
           </div>
           <!-- <img class="stonk-img" src="../assets/images/not-stonk.jpg" />
