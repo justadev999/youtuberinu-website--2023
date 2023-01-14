@@ -7,7 +7,6 @@ import StonkHero from "./components/StonkHero.vue";
 import ProjectSection from "./components/ProjectSection.vue";
 import TokenSection from "./components/TokenSection.vue";
 import SocialSection from "./components/SocialSection.vue";
-
 import { useBreakpoint } from "./functions/useBreakpoint";
 
 export default defineComponent({
@@ -47,21 +46,6 @@ export default defineComponent({
     <ProjectSection v-if="!isLoading" />
     <TokenSection v-if="!isLoading" />
     <SocialSection v-if="!isLoading" />
-    <footer
-      v-if="!isMobile && !isLoading"
-      class="
-        footer
-        w-full
-        absolute
-        bottom-0
-        left-0
-        flex
-        items-center
-        justify-center
-      "
-    >
-      <h2>Copyright 2023 | Stonk Inu | All Rights Reserved</h2>
-    </footer>
   </div>
 </template>
 
@@ -76,10 +60,5 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
   }
-}
-
-.footer {
-  height: rem(36);
-  background-color: $c-white;
 }
 </style>

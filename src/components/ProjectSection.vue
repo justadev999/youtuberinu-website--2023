@@ -19,7 +19,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section id="project" class="stonk-hero h-fit lg:h-screen w-full mb-8 lg:mb-36">
+  <section id="project" class="project-section w-full mb-12 lg:mb-24">
     <div class="description-wrapper h-full">
       <div class="chart-side w-full h-[50vh] lg:h-full mb-8 lg:mb-0">
         <div class="chart-title p-4">
@@ -60,15 +60,13 @@ export default defineComponent({
 </template>
 
 <style scoped lang="scss">
-.stonk-hero {
+.project-section {
   background-color: transparent;
-  padding-top: rem(180);
-  max-height: rem(900);
-
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 75% 20%;
     column-gap: rem(68);
+    max-height: rem(900);
   }
 }
 

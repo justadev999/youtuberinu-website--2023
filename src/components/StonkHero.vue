@@ -18,7 +18,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section id="home" class="stonk-hero lg:h-screen w-full mb-8 lg:mb-12">
+  <section id="home" class="stonk-hero w-full mb-12 lg:mb-24">
     <div class="description-wrapper h-full">
       <div
         class="
@@ -40,10 +40,10 @@ export default defineComponent({
           yelled out to the empty room, a glimmer of hope in his eyes.
         </p>
       </div>
-      <div class="image-side w-full h-full flex items-end justify-end">
+      <div class="image-side w-full h-full relative">
         <img
           src="../assets/images/stonk-body-_1_.webp"
-          class="stonk-body-image h-full"
+          class="stonk-body-image absolute bottom-0 right-0"
         />
       </div>
     </div>
@@ -61,14 +61,17 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .stonk-hero {
-  max-height: rem(900);
   background-color: $c-blue;
-  padding-top: rem(180);
+  padding-top: rem(140);
+  height: calc(100vh - 140px);
 
   @media (min-width: 1024px) {
+    padding-top: rem(180);
+  height: calc(100vh - 180px);
     display: grid;
     grid-template-columns: 75% 20%;
     column-gap: rem(68);
+    max-height: rem(900);
   }
 }
 
@@ -100,6 +103,12 @@ export default defineComponent({
     @media (min-width: 1024px) {
       font-size: rem(22);
     }
+  }
+}
+
+.image-side {
+  .stonk-body-image {
+    max-height: 100%;
   }
 }
 .stonk-o-meter {

@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section id="token" class="stonk-hero h-fit lg:h-screen w-full mb-8 lg:mb-12">
+  <section id="token" class="stonk-hero h-fit lg:h-screen w-full mb-12 lg:mb-24">
     <div class="token-infos-wrapper h-full w-full">
       <div
         class="
@@ -160,15 +160,9 @@ export default defineComponent({
 <style scoped lang="scss">
 .stonk-hero {
   background-color: transparent;
-  padding-top: rem(355);
-  max-height: rem(900);
-
-  @media(min-height:850px){
-    padding-top: rem(425);
-  }
 
   @media (min-width: 1024px) {
-    padding-top: rem(180);
+    max-height: rem(900);
     display: grid;
     grid-template-columns: 75% 20%;
     column-gap: rem(68);

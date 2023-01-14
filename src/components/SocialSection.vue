@@ -3,10 +3,10 @@ import { computed, defineComponent } from "vue";
 import { useBreakpoint } from "../functions/useBreakpoint";
 
 import TgLogo from "../assets/svg/telegram-logo(1).svg";
-import EthLogo from "../assets/svg/etherscan-logo(1).svg"
+import EthLogo from "../assets/svg/etherscan-logo(1).svg";
 import UniswapLogo from "../assets/svg/uniswap-logo(1).svg";
 import TwLogo from "../assets/svg/twitter-logo(1).svg";
-import DexToolsLogo from "../assets/svg/dextools-logo(1).svg"
+import DexToolsLogo from "../assets/svg/dextools-logo(1).svg";
 
 export default defineComponent({
   name: "SocialSection",
@@ -36,7 +36,7 @@ export default defineComponent({
       <div class="stonk-claim flex items-center justify-center mb-[10%]">
         <p class="stonk-w-us">Stonk with us!</p>
       </div>
-      <ul class="social-list-wrapper w-full">
+      <ul class="social-list-wrapper w-full mb-24 lg:mb-0">
         <li class="social-list-item cursor-pointer">
           <TgLogo />
         </li>
@@ -50,9 +50,23 @@ export default defineComponent({
           <TwLogo />
         </li>
         <li class="social-list-item cursor-pointer">
-          <DexToolsLogo/>
+          <DexToolsLogo />
         </li>
       </ul>
+      <footer
+        class="
+          footer
+          w-full
+          absolute
+          bottom-0
+          left-0
+          flex
+          items-center
+          justify-center
+        "
+      >
+        <h2>Copyright 2023 | Stonk Inu | All Rights Reserved</h2>
+      </footer>
     </div>
   </section>
 </template>
@@ -60,11 +74,10 @@ export default defineComponent({
 <style scoped lang="scss">
 .social-section {
   background-color: transparent;
-  padding-top: rem(220);
-  transform: translateY(55%);
-  min-height: 100vh;
+  max-height: 100vh;
 
   @media (min-width: 1024px) {
+    max-height: rem(900);
     min-height: auto;
     transform: none;
   }
@@ -133,5 +146,10 @@ export default defineComponent({
       transform: scale(1.1);
     }
   }
+}
+
+.footer {
+  height: rem(36);
+  background-color: $c-white;
 }
 </style>
