@@ -14,8 +14,13 @@ export default defineComponent({
   setup() {
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
+
+    const navigateTo = (add) => {
+      window.open(add, "_blank");
+    };
     return {
       isMobile,
+      navigateTo,
     };
   },
 });
@@ -37,21 +42,21 @@ export default defineComponent({
         <p class="stonk-w-us">Stonk with us!</p>
       </div>
       <ul class="social-list-wrapper w-full mb-24 lg:mb-0">
-        <li class="social-list-item cursor-pointer">
+        <button class="social-list-item cursor-pointer">
           <TgLogo />
-        </li>
-        <li class="social-list-item cursor-pointer">
+        </button>
+        <button class="social-list-item cursor-pointer">
           <EthLogo />
-        </li>
-        <li class="social-list-item cursor-pointer">
+        </button>
+        <button class="social-list-item cursor-pointer">
           <UniswapLogo />
-        </li>
-        <li class="social-list-item cursor-pointer">
-          <TwLogo />
-        </li>
-        <li class="social-list-item cursor-pointer">
+        </button>
+        <button class="social-list-item cursor-pointer">
+          <TwLogo @click="navigateTo('https://twitter.com/stonkerc')" />
+        </button>
+        <button class="social-list-item cursor-pointer">
           <DexToolsLogo />
-        </li>
+        </button>
       </ul>
       <footer
         class="

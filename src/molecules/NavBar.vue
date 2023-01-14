@@ -77,11 +77,11 @@ nav {
 }
 
 .buy-btn {
-  border: 10px solid #0c0b56;
-  box-shadow: 12px 15px 4px #000000;
+  border: 7px solid #0c0b56;
+  box-shadow: 8px 9px 4px #000000;
   background-color: $c-white;
-  height: rem(80);
-  width: rem(110);
+  height: rem(70);
+  width: rem(90);
   transition: all 0.12s ease-in;
 
   @media (min-width: 1024px) {
@@ -90,7 +90,7 @@ nav {
   }
 
   p {
-    font-size: rem(32);
+    font-size: rem(24);
     @media (min-width: 1024px) {
       font-size: rem(40);
     }
@@ -109,6 +109,6 @@ nav {
 
 .logo-label-mobile{
   color: $c-white;
-  font-size: rem(42);
+  font-size: rem(32);
 }
 </style>

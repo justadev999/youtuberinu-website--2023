@@ -5,6 +5,8 @@ import { useBreakpoint } from "../functions/useBreakpoint";
 import YellowArrow from "../assets/svg/yellow-arrow.svg";
 import ChartImage from "../assets/svg/chart-img(1).svg";
 
+import gsap from "gsap";
+
 export default defineComponent({
   name: "ProjectSection",
   components: { YellowArrow, ChartImage },
@@ -41,9 +43,26 @@ export default defineComponent({
             justify-between
           "
         >
-          <img class="stonk-img" src="../assets/images/stonk-img.jpg" />
-          <img class="stonk-img" src="../assets/images/not-stonk.jpg" />
-          <img class="stonk-img" src="../assets/images/confused-stonk.jpg" />
+          <div class="stonk-img relative overflow-hidden">
+            <img
+              class="w-full h-full absolute top-0 left-0 object-cover"
+              src="../assets/images/stonk-img.jpg"
+            />
+          </div>
+          <div class="stonk-img relative overflow-hidden">
+            <img
+              class="w-full h-full absolute top-0 left-0 object-cover"
+              src="../assets/images/stonk-img.jpg"
+            />
+          </div>
+          <div class="stonk-img relative overflow-hidden">
+            <img
+              class="w-full h-full absolute top-0 left-0 object-cover"
+              src="../assets/images/stonk-img.jpg"
+            />
+          </div>
+          <!-- <img class="stonk-img" src="../assets/images/not-stonk.jpg" />
+          <img class="stonk-img" src="../assets/images/confused-stonk.jpg" /> -->
         </div>
       </div>
     </div>
@@ -104,17 +123,25 @@ export default defineComponent({
 }
 
 .images-wrapper {
+  transition: all .14 ease-in;
   & .stonk-img {
     height: rem(192);
     width: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     background-color: white;
     border: 10px solid #0c0b56;
     filter: drop-shadow(12px 15px 4px #000000);
     margin-bottom: rem(22);
+    transition: all .14 ease-in;
 
     @media (min-width: 1024px) {
       height: 30%;
+    }
+
+    &:hover{
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 }

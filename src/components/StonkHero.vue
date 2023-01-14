@@ -1,8 +1,9 @@
 <script>
-import { computed, defineComponent } from "vue";
+import { computed, defineComponent, onMounted } from "vue";
 import { useBreakpoint } from "../functions/useBreakpoint";
-
 import RedArrow from "../assets/svg/red-arrow.svg";
+
+import gsap from "gsap";
 
 export default defineComponent({
   name: "StonkHero",
@@ -10,6 +11,60 @@ export default defineComponent({
   setup() {
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
+
+    onMounted(() => {
+      gsap.set(".stonk-label, .stonk-label span", { autoAlpha: 0, y: 20 });
+      const tl = gsap.timeline();
+
+      tl.fromTo(
+        ".stonk-label",
+        { autoAlpha: 0, y: 20 },
+        { autoAlpha: 1, y: 0, duration: 0.6, animation: "power3.in" }
+      );
+      tl.fromTo(
+        ".stonk-label span",
+        { autoAlpha: 0, y: 20, scale: 1 },
+        {
+          autoAlpha: 1,
+          y: -70,
+          duration: 0.4,
+          animation: "power3.in",
+        }
+      );
+      tl.fromTo(
+        ".text-side p",
+        { autoAlpha: 0, y: 20 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.4,
+          animation: "power3.in",
+        },
+        "<"
+      );
+      tl.fromTo(
+        ".stonk-body-image",
+        { autoAlpha: 0, scale: 0.5 },
+        {
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.4,
+          animation: "power3.in",
+        },
+        "<"
+      );
+      tl.fromTo(
+        ".red-arrow",
+        { autoAlpha: 0, y: 50 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.4,
+          animation: "power3.in",
+        },
+        "<"
+      );
+    });
     return {
       isMobile,
     };
@@ -32,7 +87,7 @@ export default defineComponent({
           lg:px-4
         "
       >
-        <h2>One goal: STONK!</h2>
+        <h2 class="stonk-label">One goal: <span>STONK!</span></h2>
         <p>
           Chad felt a deep sense of hopelessness as he struggled to come to
           terms with his losses and mistakes. But in his darkest hour, he let
@@ -67,7 +122,7 @@ export default defineComponent({
 
   @media (min-width: 1024px) {
     padding-top: rem(180);
-  height: calc(100vh - 180px);
+    height: calc(118vh - 180px);
     display: grid;
     grid-template-columns: 75% 20%;
     column-gap: rem(68);
