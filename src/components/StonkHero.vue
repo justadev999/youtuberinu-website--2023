@@ -110,6 +110,11 @@ export default defineComponent({
           terms with his losses and mistakes. But in his darkest hour, he let
           out a cry of determination. "I know! I'll create a crypto stonk!" he
           yelled out to the empty room, a glimmer of hope in his eyes.
+          <br />
+          <span class="launch-label"
+            >Launch: January 18th 2023. CA will be released
+            <a href="https://t.me/stonkgram" target="_blank">here</a>.
+          </span>
         </p>
       </div>
     </div>
@@ -196,5 +201,9 @@ export default defineComponent({
 
 .red-arrow {
   height: rem(114);
+}
+
+.launch-label {
+  color: $c-purple;
 }
 </style>
