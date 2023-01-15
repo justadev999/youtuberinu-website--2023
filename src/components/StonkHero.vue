@@ -112,8 +112,10 @@ export default defineComponent({
           yelled out to the empty room, a glimmer of hope in his eyes.
           <br />
           <span class="launch-label"
-            >Launch: January 18th 2023. CA will be released
-            <a href="https://t.me/stonkgram" target="_blank">here</a>.
+            >Stealth launching soon. CA will be released
+            <a class="here-label" href="https://t.me/stonkgram" target="_blank"
+              >here</a
+            >.
           </span>
         </p>
       </div>
@@ -205,5 +207,9 @@ export default defineComponent({
 
 .launch-label {
   color: $c-purple;
+}
+
+.here-label {
+  text-decoration: underline;
 }
 </style>

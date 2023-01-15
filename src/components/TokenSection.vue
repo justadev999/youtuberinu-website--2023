@@ -81,7 +81,7 @@ export default defineComponent({
                 justify-center
               "
             >
-              <p>1 Billion</p>
+              <p>1,000,000,000</p>
             </div>
           </li>
           <li class="stat-li w-full h-full">
@@ -100,7 +100,7 @@ export default defineComponent({
                 justify-center
               "
             >
-              <p>3/3</p>
+              <p>4/4</p>
             </div>
           </li>
           <li class="stat-li w-full h-full">
