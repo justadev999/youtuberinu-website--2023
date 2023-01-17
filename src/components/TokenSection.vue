@@ -100,7 +100,7 @@ export default defineComponent({
                 justify-center
               "
             >
-              <p>3/3</p>
+              <p>0</p>
             </div>
           </li>
           <li class="stat-li w-full h-full">
@@ -119,7 +119,7 @@ export default defineComponent({
                 justify-center
               "
             >
-              <p>3% (Locked for 1 week)</p>
+              <p>5%</p>
             </div>
           </li>
           <li class="stat-li w-full h-full">
