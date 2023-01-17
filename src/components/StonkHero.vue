@@ -112,10 +112,7 @@ export default defineComponent({
           yelled out to the empty room, a glimmer of hope in his eyes.
           <br />
           <span class="launch-label"
-            >Stealth launching soon. CA will be released
-            <a class="here-label" href="https://t.me/stonkgram" target="_blank"
-              >here</a
-            >.
+            >CA: 0x21715Da45Fca65839f19ae7a2691C05ca7449a83
           </span>
         </p>
       </div>

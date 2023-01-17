@@ -7,8 +7,18 @@ export default defineComponent({
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
 
+    const buyBtn = () => {
+
+      //Stonk CA here
+      window.open(
+        "https://app.uniswap.org/#/swap?outputCurrency=0x4159862bcf6b4393a80550b1ed03dffa6f90533c",
+        "_blank"
+      );
+    };
+
     return {
       isMobile,
+      buyBtn
     };
   },
 });
@@ -16,9 +26,9 @@ export default defineComponent({
 
 <template>
   <nav class="w-full fixed top-0 left-0 pt-8 px-8 lg:px-16">
-     <div v-if="isMobile" class="logo-wrapper">
-        <h2 class="logo-label-mobile">$STONK Inu</h2>
-      </div>
+    <div v-if="isMobile" class="logo-wrapper">
+      <h2 class="logo-label-mobile">$STONK Inu</h2>
+    </div>
     <div
       v-if="!isMobile"
       class="nav-content w-full flex items-center justify-between pl-7 pr-20"
@@ -39,7 +49,7 @@ export default defineComponent({
       </ul>
     </div>
     <button class="buy-btn">
-      <p class="buy-label">BUY</p>
+      <p class="buy-label" @click="buyBtn()">BUY</p>
     </button>
   </nav>
 </template>
@@ -107,7 +117,7 @@ nav {
   }
 }
 
-.logo-label-mobile{
+.logo-label-mobile {
   color: $c-white;
   font-size: rem(32);
 }

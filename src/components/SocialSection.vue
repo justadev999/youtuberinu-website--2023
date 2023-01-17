@@ -46,7 +46,13 @@ export default defineComponent({
           <TgLogo @click="navigateTo('https://t.me/stonkgram')" />
         </button>
         <button class="social-list-item cursor-pointer">
-          <EthLogo />
+          <EthLogo
+            @click="
+              navigateTo(
+                'https://etherscan.io/token/0x5a101a127d5b0Ff8d67ba0917E775c4B27C230Ff'
+              )
+            "
+          />
         </button>
         <button class="social-list-item cursor-pointer">
           <UniswapLogo />
@@ -55,7 +61,13 @@ export default defineComponent({
           <TwLogo @click="navigateTo('https://twitter.com/stonkerc')" />
         </button>
         <button class="social-list-item cursor-pointer">
-          <DexToolsLogo />
+          <DexToolsLogo
+            @click="
+              navigateTo(
+                'https://www.dextools.io/app/en/ether/pair-explorer/0x9c69d0abf43da8cf0e64ac8be56b1fcea81dc6fc'
+              )
+            "
+          />
         </button>
       </ul>
       <footer
