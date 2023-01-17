@@ -136,7 +136,7 @@ export default defineComponent({
 .stonk-hero {
   background-color: $c-blue;
   padding-top: rem(140);
-  height: calc(100vh - 140px);
+  height: calc(120vh - 140px);
 
   @media (min-width: 1024px) {
     padding-top: rem(180);
@@ -180,6 +180,7 @@ export default defineComponent({
 }
 
 .image-side {
+  min-height: 50%;
   .stonk-body-image {
     max-height: 100%;
   }
