@@ -100,7 +100,7 @@ export default defineComponent({
                 justify-center
               "
             >
-              <p>4/4</p>
+              <p>3/3</p>
             </div>
           </li>
           <li class="stat-li w-full h-full">
@@ -119,7 +119,7 @@ export default defineComponent({
                 justify-center
               "
             >
-              <p>5%</p>
+              <p>3% (Locked for 1 week)</p>
             </div>
           </li>
           <li class="stat-li w-full h-full">
@@ -138,8 +138,8 @@ export default defineComponent({
                 justify-center
               "
             >
-              <p>Locked</p>
-              <p>Renounced</p>
+              <p>Liquidity Locked</p>
+              <p>Ownership Renounced</p>
             </div>
           </li>
         </ul>
