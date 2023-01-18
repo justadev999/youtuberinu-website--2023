@@ -7,6 +7,7 @@ import StonkHero from "./components/StonkHero.vue";
 import ProjectSection from "./components/ProjectSection.vue";
 import TokenSection from "./components/TokenSection.vue";
 import SocialSection from "./components/SocialSection.vue";
+import VoltSSection from "./components/VoltSSection.vue";
 import { useBreakpoint } from "./functions/useBreakpoint";
 
 export default defineComponent({
@@ -18,6 +19,7 @@ export default defineComponent({
     ProjectSection,
     TokenSection,
     SocialSection,
+    VoltSSection
   },
   setup() {
     const isLoading = ref(true);
@@ -44,6 +46,7 @@ export default defineComponent({
     <LoadingScreen v-if="isLoading" />
     <StonkHero v-if="!isLoading" />
     <ProjectSection v-if="!isLoading" />
+    <VoltSSection v-if="!isLoading" />
     <TokenSection v-if="!isLoading" />
     <SocialSection v-if="!isLoading" />
   </div>

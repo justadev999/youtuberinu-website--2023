@@ -29,9 +29,10 @@ export default defineComponent({
         </div> -->
         <div class="chart h-full">
           <!-- <ChartImage class="w-full h-full" /> -->
-            <iframe
+          <iframe
               src="https://dexscreener.com/ethereum/0x9C69D0ABf43dA8cf0E64AC8be56B1FceA81Dc6fC?embed=1&theme=dark&info=0"
             ></iframe>
+          
         </div>
       </div>
       <div class="images-side w-full h-full flex items-end justify-end">
@@ -80,6 +81,10 @@ export default defineComponent({
 </template>
 
 <style scoped lang="scss">
+.chart {
+  outline: auto;
+  min-height: 500px;
+}
 .project-section {
   background-color: transparent;
   @media (min-width: 1024px) {
@@ -168,7 +173,7 @@ export default defineComponent({
   height: rem(275);
 }
 
-iframe{
+iframe {
   height: 100%;
   width: 100%;
 }
