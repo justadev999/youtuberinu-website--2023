@@ -11,7 +11,7 @@ export default defineComponent({
 
       //Stonk CA here
       window.open(
-        "https://app.uniswap.org/#/swap?outputCurrency=0x4159862bcf6b4393a80550b1ed03dffa6f90533c",
+        "https://app.uniswap.org/#/swap?outputCurrency=0x5a101a127d5b0ff8d67ba0917e775c4b27c230ff",
         "_blank"
       );
     };
