@@ -88,7 +88,7 @@ export default defineComponent({
           justify-center
         "
       >
-        <h2>Copyright 2023 | Stonk Inu | All Rights Reserved</h2>
+        <h2>Copyright 2023 | Stonk | All Rights Reserved</h2>
       </footer>
     </div>
   </section>
