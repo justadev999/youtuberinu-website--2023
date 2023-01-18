@@ -49,13 +49,13 @@ export default defineComponent({
           <EthLogo
             @click="
               navigateTo(
-                'https://etherscan.io/token/0x5a101a127d5b0Ff8d67ba0917E775c4B27C230Ff'
+                'https://etherscan.io/token/0x5a101a127d5b0ff8d67ba0917e775c4b27c230ff'
               )
             "
           />
         </button>
         <button class="social-list-item cursor-pointer">
-          <UniswapLogo />
+          <UniswapLogo @click="navigateTo('https://app.uniswap.org/#/swap?outputCurrency=0x5a101a127d5b0ff8d67ba0917e775c4b27c230ff')" />
         </button>
         <button class="social-list-item cursor-pointer">
           <TwLogo @click="navigateTo('https://twitter.com/stonkerc')" />
