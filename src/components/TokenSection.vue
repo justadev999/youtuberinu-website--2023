@@ -8,7 +8,7 @@ export default defineComponent({
   name: "TokenSection",
   components: { GreenArrow },
   setup() {
-    const tokenContract = ref("TBA");
+    const tokenContract = ref("0x5a101a127d5b0ff8d67ba0917e775c4b27c230ff");
 
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
