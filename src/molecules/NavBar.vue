@@ -27,14 +27,14 @@ export default defineComponent({
 <template>
   <nav class="w-full fixed top-0 left-0 pt-8 px-8 lg:px-16">
     <div v-if="isMobile" class="logo-wrapper">
-      <h2 class="logo-label-mobile">$STONK Inu</h2>
+      <h2 class="logo-label-mobile">$STONK</h2>
     </div>
     <div
       v-if="!isMobile"
       class="nav-content w-full flex items-center justify-between pl-7 pr-20"
     >
       <div class="logo-wrapper">
-        <h2 class="logo-label">$STONK Inu</h2>
+        <h2 class="logo-label">$STONK</h2>
       </div>
       <ul class="nav-items-wrapper flex items-center justify-between w-[60%]">
         <li>
