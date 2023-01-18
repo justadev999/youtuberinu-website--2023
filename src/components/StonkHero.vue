@@ -112,7 +112,7 @@ export default defineComponent({
           yelled out to the empty room, a glimmer of hope in his eyes.
           <br />
           <span class="launch-label"
-            >CA: 0x21715Da45Fca65839f19ae7a2691C05ca7449a83
+            >CA: 0x5a101a127d5b0ff8d67ba0917e775c4b27c230ff
           </span>
         </p>
       </div>
