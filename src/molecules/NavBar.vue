@@ -8,7 +8,6 @@ export default defineComponent({
     const isMobile = computed(() => matches.value?.beforeLg);
 
     const buyBtn = () => {
-
       //Stonk CA here
       window.open(
         "https://app.uniswap.org/#/swap?outputCurrency=0x5a101a127d5b0ff8d67ba0917e775c4b27c230ff",
@@ -18,7 +17,7 @@ export default defineComponent({
 
     return {
       isMobile,
-      buyBtn
+      buyBtn,
     };
   },
 });
@@ -34,7 +33,9 @@ export default defineComponent({
       class="nav-content w-full flex items-center justify-between pl-7 pr-20"
     >
       <div class="logo-wrapper">
-        <h2 class="logo-label">$STONK</h2>
+        <h2 class="logo-label flex items-center">
+          <span><img class="logo-img" src="../assets/images/small-logo.png" /></span> $STONK
+        </h2>
       </div>
       <ul class="nav-items-wrapper flex items-center justify-between w-[60%]">
         <li>
@@ -120,5 +121,10 @@ nav {
 .logo-label-mobile {
   color: $c-white;
   font-size: rem(32);
+}
+
+.logo-img {
+  height: 75px;
+  margin-right: rem(10);
 }
 </style>
