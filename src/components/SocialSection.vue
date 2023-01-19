@@ -43,7 +43,7 @@ export default defineComponent({
       </div>
       <ul class="social-list-wrapper w-full mb-24 lg:mb-0">
         <button class="social-list-item cursor-pointer">
-          <TgLogo @click="navigateTo('https://t.me/stonkgram')" />
+          <TgLogo @click="navigateTo('https://t.me/stonkcheckpoint')" />
         </button>
         <button class="social-list-item cursor-pointer">
           <EthLogo
