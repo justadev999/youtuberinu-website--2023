@@ -5,15 +5,3 @@
 html {
     scroll-behavior: smooth;
 }
-
-body {
-    background-color:#2724C9;
-}
-
- @media(min-width:1680px){
-    body {
-display: flex;
-        align-tems:center;
-        justify-content:center;
-    }
-    }
