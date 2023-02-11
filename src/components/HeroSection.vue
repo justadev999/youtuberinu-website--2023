@@ -25,7 +25,8 @@ export default defineComponent({
         items-center
         justify-around
         absolute
-        top-[30%]
+        top-[20%]
+        lg:top-[30%]
         nottom-0
         right-0
         left-0
