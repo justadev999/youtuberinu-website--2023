@@ -2,9 +2,11 @@
 import { computed, defineComponent, onMounted, ref } from "vue";
 import { useBreakpoint } from "./functions/useBreakpoint";
 
+import HeroSection from "./components/HeroSection.vue";
+
 export default defineComponent({
   name: "App",
-  components: {},
+  components: {HeroSection},
   setup() {
     const matches = useBreakpoint();
     const isMobile = computed(() => matches.value?.beforeLg);
@@ -17,7 +19,7 @@ export default defineComponent({
 
 <template>
   <div class="main-wrapper w-full relative">
-    hello world
+    <HeroSection />
   </div>
 </template>
 
