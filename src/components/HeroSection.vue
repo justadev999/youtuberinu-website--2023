@@ -39,13 +39,8 @@ export default defineComponent({
           the boundaries of what's possible by infusing a piece of my visionary
           mindset into this advanced technology. And while some may call it a
           mere smart contract, I see it as an opportunity to democratize access
-          to my brilliance and shape the future of AI.But let's get real, I
-          don't just talk about AI, I live and breathe it. I may not have an AI
-          product yet, but mark my words, when I do, it will be
-          game-changing.And as for the skeptics who doubt my commitment to
-          progress I decided this smart contract to be low taxes (2/2) and of
-          course with renounced ownership. So, watch this space, AI, I'll be
-          back and ready to revolutionize the world once again."
+          to my brilliance and shape the future of AI. Look at the sky, I'm here
+          to revolutionize the world once again."
         </p>
         <div class="infos-wrapper flex items-center justify-between">
           <div class="icons-wrapper flex items-center justify-center">
