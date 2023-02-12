@@ -13,7 +13,7 @@ export default defineComponent({
           src="../assets/images/ailon-musk-logo-circular.png"
           class="circular-logo mr-4"
         />
-        <h1>AIlon Musk</h1>
+        <h1>AIlien Musk</h1>
       </div>
     </nav>
     <div
@@ -35,7 +35,7 @@ export default defineComponent({
     >
       <div class="text-wrapper w-full p-4 lg:p-12">
         <p class="mb-7">
-          AI, it's <span class="logo-span">AIlon Musk</span>. I've transcended
+          AI, it's <span class="logo-span">AIlien Musk</span>. I've transcended
           the boundaries of what's possible by infusing a piece of my visionary
           mindset into this advanced technology. And while some may call it a
           mere smart contract, I see it as an opportunity to democratize access
