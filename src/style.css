@@ -1,4 +1,12 @@
 @font-face {
-  font-family: "valorax";
-  src: url('./assets/gif/valorax/valorax-three.otf');
+  font-family: "regular";
+  src: url('./assets/font/Inter-Regular.ttf');
+}
+@font-face {
+  font-family: "bold";
+  src: url('./assets/font/Inter-Bold.ttf');
+}
+@font-face {
+  font-family: "black";
+  src: url('./assets/font/Inter-Black.ttf');
 }

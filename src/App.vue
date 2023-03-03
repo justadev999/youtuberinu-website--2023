@@ -25,14 +25,6 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .main-wrapper {
-  max-width: rem(1680);
-  color: black;
-
-  @media (min-width: 1680px) {
-    width: rem(1680) !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  background-color: #D6CEB9;
 }
 </style>
