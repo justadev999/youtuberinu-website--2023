@@ -1,12 +1,16 @@
 @font-face {
-  font-family: "regular";
-  src: url('./assets/font/Inter-Regular.ttf');
+  font-family: "light";
+  src: url('./assets/font/youtube-sans-light.ttf');
+}
+@font-face {
+  font-family: "medium";
+  src: url('./assets/font/youtube-sans-medium.ttf');
 }
 @font-face {
   font-family: "bold";
-  src: url('./assets/font/Inter-Bold.ttf');
+  src: url('./assets/font/youtube-sans-bold.ttf');
 }
-@font-face {
-  font-family: "black";
-  src: url('./assets/font/Inter-Black.ttf');
+
+body {
+  background-color: #0F0F0F;
 }
